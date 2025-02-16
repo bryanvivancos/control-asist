@@ -10,8 +10,8 @@ from django.core.files.base import ContentFile
 class Empleados(models.Model):
     nombre=models.CharField(max_length=100)
     codigo=models.CharField(max_length=100,unique=True)
-    foto=models.ImageField(upload_to='fotos/',blank=True,null=True)
-    codigo_barras=models.ImageField(upload_to='codigos/',blank=True,null=True)
+    foto=models.ImageField(upload_to='../fotos/',blank=True,null=True)
+    codigo_barras=models.ImageField(upload_to='../codigos/',blank=True,null=True)
     
     def save(self, *args, **kwargs):
         if not self.codigo:
