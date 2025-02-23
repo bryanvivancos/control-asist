@@ -84,15 +84,16 @@ WSGI_APPLICATION = 'app_controlasist.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'bdcasist',
-        'HOST': '172.17.80.1',
+        'NAME': 'bdcassist',
+        'HOST': 'bryanZephyrus',
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
-            'TrustServerCertificate': 'yes',
             'unicode_results': True,
-            'user': 'bzephyrus',  # Agrega un usuario SQL válido
-            'password': 'bzephyrus',  # La contraseña correspondiente
+            'trusted_connection': 'yes',
+            #'TrustServerCertificate': 'yes',
+            # 'user': 'bzephyrus',  # WSL Agrega un usuario SQL válido
+            # 'password': 'bzephyrus',  # WSL La contraseña correspondiente
         }
     }
 }
