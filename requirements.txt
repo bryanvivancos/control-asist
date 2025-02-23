@@ -1,0 +1,4 @@
+pyodbc 
+mssql-django
+python-barcode
+pillow
